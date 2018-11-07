@@ -20,7 +20,7 @@ class NeedHelp extends Component {
         }
     }
 
-    handleChange = (e) => {
+    handleChange(e) {
         if (e.currentTarget.name === 'name') this.setState({ name: e.currentTarget.value });
         else if (e.currentTarget.name === 'email') this.setState({ email: e.currentTarget.value });
         else if (e.currentTarget.name === 'category') this.setState({ category: e.currentTarget.value });
@@ -32,8 +32,8 @@ class NeedHelp extends Component {
 
         return (
             <NeedHelpContainer>
-                <Input name="name" value={name} placeholder="Your Name" onChange={this.handleInputChange} />
-                <Input name="email" value={email} placeholder="E-Mail Address" onChange={this.handleInputChange} />
+                <Input name="name" value={name} placeholder="Your Name" onChange={(e) => this.handleChange(e)} />
+                <Input name="email" value={email} placeholder="E-Mail Address" onChange={(e) => this.handleChange(e)} />
             </NeedHelpContainer>
         );
     }
