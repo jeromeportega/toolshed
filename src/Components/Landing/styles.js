@@ -87,13 +87,16 @@ export const StyledBtn = styled(Link)`
     z-index: 1;
     border: none;
     text-decoration: none;
+
     &:hover {
         color: white;
         background-color: ${props => props.theme.colors.activeOrange};
     }
+
     &:active {
         outline: none;
     }
+
     &:focus{
         outline: none;
     }
