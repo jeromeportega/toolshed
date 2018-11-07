@@ -1,5 +1,7 @@
 const theme = {
-  green: 'green',
+  colors: {
+    activeOrange: '#F5A623',
+  }
 }
 
 export default theme;
