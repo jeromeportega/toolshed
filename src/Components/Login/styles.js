@@ -1,5 +1,5 @@
 import styled from 'styled-components';
 
 export const LoginContainer = styled.div`
-    background-color: yellow;
+    background-color: ${props => props.theme.colors.activeOrange};
 `;
