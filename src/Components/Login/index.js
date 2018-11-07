@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { LoginContainer } from './styles';
 
 class Login extends Component {
     constructor() {
@@ -12,7 +13,9 @@ class Login extends Component {
 
     render() {
         return (
-            <p>Login</p>
+            <LoginContainer>
+                <p>Login</p>
+            </LoginContainer>
         );
     }
 }
