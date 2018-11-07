@@ -69,16 +69,12 @@ class NeedHelp extends Component {
     }
 
     onSuggestionsFetchRequested = ({ value }) => {
-        this.setState({
-        suggestions: getSuggestions(value)
-        });
-    };
+        this.setState({ suggestions: getSuggestions(value) });
+    }
 
     onSuggestionsClearRequested = () => {
-        this.setState({
-        suggestions: []
-        });
-    };
+        this.setState({ suggestions: [] });
+    }
 
     render() {
         const { name, email, help, value } = this.state;
@@ -87,7 +83,7 @@ class NeedHelp extends Component {
             placeholder: 'What do you need help with?',
             value,
             onChange: this.onSuggestionChange,
-          };
+        };
 
         return (
             <NeedHelpContainer autoValue={value}>
@@ -126,7 +122,7 @@ class NeedHelp extends Component {
                                 onChange={(e) => this.handleChange(e)}
                             />
                         </div>
-                        <StyledBtn to="/talk">let's talk</StyledBtn>
+                        <StyledBtn to="/chat">let's talk</StyledBtn>
                     </div>
                 </div>
             </NeedHelpContainer>
