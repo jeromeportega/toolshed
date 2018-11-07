@@ -1,22 +1,9 @@
 import React from 'react';
 
-import { LandingContainer, StyledLink, StyledBtn } from './styles';
-import homeDepotLogo from './images/homeDepotLogo.jpg';
+import { LandingContainer, StyledBtn } from './styles';
 
 const Landing = () => (
     <LandingContainer>
-        <div className="nav-container">
-            <img src={homeDepotLogo} alt="logo" className="logo" />
-            <div className="title-links-container">
-                <span className="title">home depot conerstone</span>
-                <div className="links-container">
-                    <StyledLink to="/about">about</StyledLink>
-                    <StyledLink to="/community">community</StyledLink>
-                    <StyledLink to="/faqs">faqs</StyledLink>
-                    <StyledLink to="/join-us">join us</StyledLink>
-                </div>
-            </div>
-        </div>
         <div className="columns-container">
             <div className="column help">
                 <div className="orange-opacity" />
