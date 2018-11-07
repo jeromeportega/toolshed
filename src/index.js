@@ -5,10 +5,14 @@ import App from './Components/index.js';
 import * as serviceWorker from './serviceWorker';
 
 import { BrowserRouter } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
+import theme from './utils/theme';
 
 ReactDOM.render(
     <BrowserRouter>
-        <App />
+        <ThemeProvider theme={theme}>
+            <App />
+        </ThemeProvider>
     </BrowserRouter>,
     document.getElementById('root')
 );
