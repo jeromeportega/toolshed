@@ -7,7 +7,7 @@ const Nav = () => (
   <NavContainer>
     <img src={homeDepotLogo} alt="logo" className="logo" />
     <div className="title-links-container">
-        <span className="title">home depot conerstone</span>
+        <span className="title">home depot cornerstone</span>
         <div className="links-container">
             <StyledLink to="/about">about</StyledLink>
             <StyledLink to="/community">community</StyledLink>
