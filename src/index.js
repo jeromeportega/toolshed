@@ -7,13 +7,14 @@ import { Provider } from 'react-redux';
 import store from './store';
 
 import { BrowserRouter } from 'react-router-dom';
-import { createStore } from 'redux';
+import { ThemeProvider } from 'styled-components';
+import theme from './utils/theme';
 
 ReactDOM.render(
     <BrowserRouter>
-        <Provider store={}>
+        <ThemeProvider theme={theme}>
             <App />
-        </Provider>
+        </ThemeProvider>
     </BrowserRouter>,
     document.getElementById('root')
 );
