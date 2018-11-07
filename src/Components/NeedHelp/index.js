@@ -17,7 +17,7 @@ class NeedHelp extends Component {
         this.state = {
             name: '',
             email: '',
-            category: '',
+            help: '',
             value: '',
         }
     }
@@ -46,7 +46,7 @@ class NeedHelp extends Component {
     };
 
     render() {
-        const { name, email, value } = this.state;
+        const { name, email, help, value } = this.state;
 
         const inputProps = {
             placeholder: 'What do you need help with?',
@@ -65,6 +65,12 @@ class NeedHelp extends Component {
                     inputProps={inputProps}
                     onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
                     onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+                />
+                <Input
+                    name="help"
+                    value={help}
+                    placeholder="How can we help you build something today?"
+                    onChange={(e) => this.handleChange(e)}
                 />
             </NeedHelpContainer>
         );
