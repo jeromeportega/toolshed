@@ -1,13 +1,15 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { Link } from 'react-router-dom';
 import helpImage from '../Landing/images/help.jpg';
 
 export const NeedHelpContainer = styled.div`
     height: calc(100vh - 150px);
+
     .columns-container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: calc(100vh - 150px);
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: calc(100vh - 150px);
     }
 
     .column {
@@ -62,17 +64,71 @@ export const NeedHelpContainer = styled.div`
     }
 
     .form-column {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
 
     .header-text {
-    display: block;
-    text-align: center;
-    font-size: 40px;
-    margin-top: 50px;
-    font-weight: 200;
-    margin-bottom: 100px;
+        display: block;
+        text-align: center;
+        font-size: 40px;
+        margin-top: 50px;
+        font-weight: 200;
+        margin-bottom: 100px;
+    }
+
+    .form-container {
+        max-width: 550px;
+        width: 100%;
+        input {
+            margin-bottom: 40px;
+        }
+    }
+
+    .input {
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid black;
+        font-size: 24px;
+        ${props => !props.autoValue && css`
+            font-style: italic;
+        `}
+        &:focus {
+            outline: none;
+            border-bottom: 2px solid ${props => props.theme.colors.activeOrange};
+        }
+        &:active {
+            outline: none;
+        }
+    }
+`;
+
+export const StyledBtn = styled(Link)`
+    width: 288px;
+    height: 80px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+    background-color: ${props => props.theme.colors.activeOrange};
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    z-index: 1;
+    border: none;
+    text-decoration: none;
+    &:hover {
+        color: black;
+        background-color: white;
+        border: 2px solid black;
+    }
+    &:active {
+        outline: none;
+    }
+    &:focus{
+        outline: none;
     }
 `;
