@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
-import helpImage from '../Landing/images/help.jpg';
+import helpImage from '../Landing/images/help.png';
 
 export const NeedHelpContainer = styled.div`
     height: calc(100vh - 150px);
@@ -29,7 +29,7 @@ export const NeedHelpContainer = styled.div`
         background-color: ${props => props.theme.colors.activeOrange};
         width: 100%;
         height: 100%;
-        opacity: .4;
+        opacity: .5;
         position: absolute;
     }
 
