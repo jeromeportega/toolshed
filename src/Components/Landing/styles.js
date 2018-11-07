@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-import helpImage from './images/help.jpg';
-import expertsImage from './images/experts.jpg';
+import helpImage from './images/help.png';
 import differenceImage from './images/difference.jpg';
 
 export const LandingContainer = styled.div`
@@ -16,20 +15,13 @@ export const LandingContainer = styled.div`
     }
 
     .column {
-        width: 33%;
+        width: 49.9%;
         height: 100%;
         position: relative;
     }
 
     .help {
         background-image: url(${helpImage});
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-
-    .experts {
-        background-image: url(${expertsImage});
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;

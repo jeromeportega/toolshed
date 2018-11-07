@@ -12,24 +12,14 @@ const Landing = () => (
                     <span className="column-body">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </span>
-                    <StyledBtn to="/need-help">talk to an expert</StyledBtn>
+                    <StyledBtn to="/help-landing">talk to an expert</StyledBtn>
 
-                </div>
-            </div>
-            <div className="column experts">
-                <div className="orange-opacity" />
-                <div className="text-button-container">
-                    <span className="column-title">Choose from hundreds of experts.</span>
-                    <span className="column-body">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </span>
-                    <StyledBtn to="/hire">hire an expert</StyledBtn>
                 </div>
             </div>
             <div className="column difference">
                 <div className="orange-opacity" />
                 <div className="text-button-container">
-                    <span className="column-title">Make a difference in your community.</span>
+                    <span className="column-title">Make a difference in <br /> your community.</span>
                     <span className="column-body">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </span>
