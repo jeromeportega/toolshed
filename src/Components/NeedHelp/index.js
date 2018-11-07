@@ -60,11 +60,12 @@ class NeedHelp extends Component {
     handleChange(e) {
         if (e.currentTarget.name === 'name') this.setState({ name: e.currentTarget.value });
         else if (e.currentTarget.name === 'email') this.setState({ email: e.currentTarget.value });
-        else if (e.currentTarget.name === 'category') this.setState({ category: e.currentTarget.value });
+        else if (e.currentTarget.name === 'help') this.setState({ help: e.currentTarget.value });
         else console.log("There was an error in the NeedHelp component.");
     }
 
     onSuggestionChange = (event, { newValue }) => {
+        console.log(event);
         this.setState({ value: newValue });
     }
 
