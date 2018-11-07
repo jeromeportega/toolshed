@@ -1,10 +1,11 @@
 import React from 'react';
 
 import { LandingContainer } from './styles';
+import Login from '../Login';
 
 const Landing = () => (
     <LandingContainer>
-        <p>This is the landing page.</p>
+        <Login />
     </LandingContainer>
 );
 
