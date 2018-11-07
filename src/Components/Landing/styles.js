@@ -42,6 +42,7 @@ export const LandingContainer = styled.div`
 
     .columns-container {
         display: flex;
+        justify-content: space-between;
         width: 100%;
         height: calc(100vh - 150px);
     }
