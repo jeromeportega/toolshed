@@ -12,7 +12,7 @@ const Landing = () => (
                     <span className="column-body">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </span>
-                    <StyledBtn to="/talk">talk to an expert</StyledBtn>
+                    <StyledBtn to="/need-help">talk to an expert</StyledBtn>
 
                 </div>
             </div>
