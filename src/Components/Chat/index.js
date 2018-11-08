@@ -10,7 +10,7 @@ import { Container } from './styles';
 
 const instanceLocator = 'v1:us1:06dc19cd-69e6-49fa-99cf-ad04489c9623';
 const testUrl = 'https://us1.pusherplatform.io/services/chatkit_token_provider/v1/06dc19cd-69e6-49fa-99cf-ad04489c9623/token';
-const roomId = '19373638';
+const roomId = '19373678';
 
 
 class Chat extends Component {
