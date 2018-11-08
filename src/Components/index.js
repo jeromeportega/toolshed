@@ -18,7 +18,6 @@ class App extends Component {
         <Route exact path="/need-help" component={NeedHelp} />
         <Route exact path="/find-tools" component={FindTools} />
         <Route exact path="/chat" component={Chat} />
-        <Route exact path="/map" component={Map} />
       </div>
     );
   }
