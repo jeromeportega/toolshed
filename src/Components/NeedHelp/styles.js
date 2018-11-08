@@ -103,6 +103,20 @@ export const NeedHelpContainer = styled.div`
             outline: none;
         }
     }
+
+    .suggestions-container {
+        background-color: #f5f5f5;
+        border: 1px solid #979797;
+        ${props => !props.name && css`
+            display: none;
+        `}
+    }
+
+    .suggestion-style {
+        list-style-type: none;
+        color: #7d7d7d;
+        font-size: 20px;
+    }
 `;
 
 export const StyledBtn = styled(Link)`
