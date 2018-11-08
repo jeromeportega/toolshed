@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { Link } from 'react-router-dom';
 import screwsImage from './images/screws.jpg';
 
 export const Container = styled.div`
@@ -7,7 +8,7 @@ export const Container = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding-top: 60px;
+  padding: 60px 100px 0 100px;
 
   .title {
     width: 100%;
@@ -32,6 +33,7 @@ export const Container = styled.div`
     max-width: 580px;
     max-height: 55px;
     position: relative;
+    margin-bottom: 85px;
   }
 
   .search {
@@ -54,6 +56,21 @@ export const Container = styled.div`
     position: absolute;
     top: 18px;
     right: 10px;
+  }
+
+   .options-container {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+   }
+
+  .results {
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    margin-bottom: 40px;
   }
 `;
 
@@ -83,5 +100,48 @@ export const StyledBtn = styled.button`
   }
   &:focus{
       outline: none;
+  }
+`;
+
+export const StyledLink = styled(Link)`
+  cursor: pointer;
+  width: 280px;
+  height: 280px;
+  margin-top: 100px;
+  background-color: red;
+  text-decoration: none;
+  margin 100px 60px 0 60px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+
+  .orange-background {
+    background-color: ${props => props.theme.colors.activeOrange};
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+    top: 0;
+    left: 0;
+  }
+
+  .text {
+    font-size: 18px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    font-weight: bold;
+    z-index: 1;
   }
 `;
