@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { MapContainer } from './styles';
+import Marker from '../Marker';
 
 const markers = [
     {
@@ -27,26 +29,40 @@ class Map extends Component {
 
         this.state = {
             markers: markers,
+            mapUrl: "https://www.google.com/maps/embed/v1/search?q=home%20depot%20near%20800%20barton%20springs%2C%20austin&key=AIzaSyC3K0TMYFfVx88J7shtsxQ4DB7nO_zfuDw",
         }
     }
 
-    componentDidMount() {
-        
+    showDirections = (address) => {
+        let encodedAddress = encodeURIComponent(address);
+        let origin = '900+barton+springs+road+austin+tx+78704';
+        let newMapUrl = 'https://www.google.com/maps/embed/v1/directions?key=AIzaSyC3K0TMYFfVx88J7shtsxQ4DB7nO_zfuDw&origin=' + origin + '&destination='+ encodedAddress + '&avoid=tolls|highways';
+
+        this.setState({ mapUrl: newMapUrl });
     }
 
     render() {
+        const { mapUrl } = this.state;
+
         return (
-            <div>
+            <MapContainer>
                 <iframe
                     width="600"
                     height="450"
-                    frameborder="0"
+                    frameBorder="0"
                     style={{border: '0'}}
-                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBGH0FmA8JE195xZz4IIuAl-dOGzQJrQ5A&q=Space+Needle,Seattle+WA"
-                    allowfullscreen
+                    src={mapUrl}
+                    allowFullScreen
                     title="map"
                 />
-            </div>
+                <div className="map-results">
+                    {
+                        this.state.markers.map(marker => 
+                            <Marker showDirections={this.showDirections} key={marker.name} marker={marker} />
+                        )
+                    }
+                </div>
+            </MapContainer>
         );
     }
 }
