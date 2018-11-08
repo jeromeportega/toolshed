@@ -36,15 +36,13 @@ class DonateTime extends Component {
               with families in need.
             </span>
             <span className="column-body">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Become a registered volunteer with Home Depot’s volunteer network by contributing  expert advice in the area of your specialty. In return, receive benefits from Home Depot’s XPro membership and more.
             </span>
           </div>
 
           <div className="form-column">
                 <span className="header-text">
-                Stuck? Have a question?
-                <br />
-                We're here to help.
+                Make a difference in your community.
                 </span>
                 <div className="form-container">
                     <Input name="name" value={name} placeholder="Your Name" onChange={(e) => this.handleChange(e)} />

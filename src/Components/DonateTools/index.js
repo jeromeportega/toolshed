@@ -63,7 +63,7 @@ class DonateTools extends Component {
                         <div className="text-button-container">
                             <span className="column-title">Donate your old<br />tools. Help<br />someone in need.</span>
                             <span className="column-body">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            If you have old tools that you’ve since upgraded or no longer use, bring them into a Home Depot donation center. This helps us lend tools to at-risk communities and distribute resources in need during natural disasters. Learn more at our mission page.
                             </span>
                         </div>
                     </div>
@@ -96,7 +96,7 @@ class DonateTools extends Component {
                                     title="map"
                                 />
                         }
-                        
+
                     </div>
                 </div>
             </Container>
