@@ -9,10 +9,10 @@ const Nav = () => (
     <div className="title-links-container">
         <span className="title">home depot cornerstone</span>
         <div className="links-container">
-            <StyledLink to="/about">about</StyledLink>
-            <StyledLink to="/community">community</StyledLink>
-            <StyledLink to="/faqs">faqs</StyledLink>
-            <StyledLink to="/join-us">join us</StyledLink>
+            <StyledLink to="/">home</StyledLink>
+            <StyledLink to="/help-landing">get help</StyledLink>
+            <StyledLink to="/donate">donate</StyledLink>
+            <StyledLink to="/join-us">our mission</StyledLink>
         </div>
     </div>
 
