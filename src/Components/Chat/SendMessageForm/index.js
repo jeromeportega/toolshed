@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { Container } from './styles';
+
 class SendMessageForm extends Component {
   constructor(props) {
     super(props);
@@ -29,14 +31,17 @@ class SendMessageForm extends Component {
 
   render() {
     return (
-      <form className="send-message-form" onSubmit={this.handleSubmit}>
-        <input
-          onChange={this.handleChange}
-          value={this.state.message}
-          placeholder="Type your message and hit ENTER"
-          type="text"
-        />
-      </form>
+      <Container message={this.state.message}>
+        <form className="send-message-form" onSubmit={this.handleSubmit}>
+          <input
+            onChange={this.handleChange}
+            value={this.state.message}
+            placeholder="Type your message and hit ENTER"
+            type="text"
+          />
+          <button type="submit">send</button>
+        </form>
+      </Container>
     )
   }
 }
