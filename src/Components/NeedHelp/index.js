@@ -42,6 +42,8 @@ const suggestions = [
 
 const theme = {
     input: 'input',
+    suggestionsContainerOpen: 'suggestions-container',
+    suggestion: 'suggestion-style',
 };
 
 class NeedHelp extends Component {
@@ -86,7 +88,7 @@ class NeedHelp extends Component {
         };
 
         return (
-            <NeedHelpContainer autoValue={value}>
+            <NeedHelpContainer autoValue={value} name={value}>
                  <div className="columns-container">
                     <div className="column help">
                         <div className="orange-opacity" />

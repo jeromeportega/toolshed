@@ -8,6 +8,8 @@ import FindTools from './FindTools';
 import Chat from './Chat';
 import DonateLanding from './DonateLanding';
 import DonateTools from './DonateTools';
+import DonateTime from './DonateTime';
+import DonateThanks from './DonateThanks';
 
 class App extends Component {
   render() {
@@ -21,6 +23,8 @@ class App extends Component {
         <Route exact path="/chat" component={Chat} />
         <Route exact path="/donate" component={DonateLanding} />
         <Route exact path="/donate-tools" component={DonateTools} />
+        <Route exact path="/donate-time" component={DonateTime} />
+        <Route exact path="/donate-thanks" component={DonateThanks} />
       </div>
     );
   }

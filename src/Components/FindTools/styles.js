@@ -26,6 +26,8 @@ export const Container = styled.div`
     text-align: center;
     font-weight: 200;
     margin-bottom: 40px;
+    margin: 0 auto;
+    max-width: 600px;
   }
 
   .search-container {

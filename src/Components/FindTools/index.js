@@ -38,34 +38,14 @@ class FindTools extends Component {
           A low-cost alternative to renting tools.
         </span>
         <span className="sub-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Don’t have the money to rent new tools? Our donation network allows us to rent used, donated tools for next to nothing. Search for a tool you need below to see a list of locations to rent from.
         </span>
         <div className="search-container">
           <img className="search-image" src={searchImage} alt="search"/>
           <input className="search" name="searchString" value={searchString} placeholder="What are you looking for?" onChange={this.updateSearchString} />
         </div>
         <StyledBtn onClick={this.updateBtnClicked}>find tools</StyledBtn>
-        {!btnClicked
-          ?
-            <div className="options-container">
-              <StyledLink to="test">
-                <img src={helpImage} alt="help"/>
-                <span className="orange-background" />
-                <span className="text">want to help?</span>
-              </StyledLink>
-              <StyledLink to="test">
-                <img src={chatImage} alt="help"/>
-                <span className="orange-background" />
-                <span className="text">chat with an expert</span>
-              </StyledLink>
-              <StyledLink to="test">
-                <img src={callImage} alt="help"/>
-                <span className="orange-background" />
-                <span className="text">call us</span>
-              </StyledLink>
-            </div>
-          :
+        {btnClicked &&
           <React.Fragment>
             <span className="results">Showing results for "{searchString}"</span>
             <Map />
