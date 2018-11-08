@@ -12,7 +12,7 @@ const Nav = () => (
             <StyledLink to="/">home</StyledLink>
             <StyledLink to="/help-landing">get help</StyledLink>
             <StyledLink to="/donate">donate</StyledLink>
-            <StyledLink to="/join-us">our mission</StyledLink>
+            <a href="https://corporate.homedepot.com/about/values" target="_blank">our mission</a>
         </div>
     </div>
 
