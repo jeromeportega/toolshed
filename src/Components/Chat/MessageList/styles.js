@@ -18,6 +18,10 @@ export const Container = styled.div`
       min-width: 50px;
     }
 
+    .jason {
+      color: ${props => props.theme.colors.activeOrange};
+    }
+
     .sender-message {
       font-size: 20px;
     }
