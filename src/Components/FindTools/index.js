@@ -44,8 +44,8 @@ class FindTools extends Component {
         <div className="search-container">
           <img className="search-image" src={searchImage} alt="search"/>
           <input className="search" name="searchString" value={searchString} placeholder="What are you looking for?" onChange={this.updateSearchString} />
-          <StyledBtn onClick={this.updateBtnClicked}>find tools</StyledBtn>
         </div>
+        <StyledBtn onClick={this.updateBtnClicked}>find tools</StyledBtn>
         {!btnClicked
           ?
             <div className="options-container">
