@@ -47,8 +47,9 @@ class Map extends Component {
         return (
             <MapContainer>
                 <iframe
-                    width="600"
-                    height="450"
+                    className="map"
+                    width="100%"
+                    height="100%"
                     frameBorder="0"
                     style={{border: '0'}}
                     src={mapUrl}
