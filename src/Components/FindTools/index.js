@@ -46,26 +46,7 @@ class FindTools extends Component {
           <input className="search" name="searchString" value={searchString} placeholder="What are you looking for?" onChange={this.updateSearchString} />
         </div>
         <StyledBtn onClick={this.updateBtnClicked}>find tools</StyledBtn>
-        {!btnClicked
-          ?
-            <div className="options-container">
-              <StyledLink to="test">
-                <img src={helpImage} alt="help"/>
-                <span className="orange-background" />
-                <span className="text">want to help?</span>
-              </StyledLink>
-              <StyledLink to="test">
-                <img src={chatImage} alt="help"/>
-                <span className="orange-background" />
-                <span className="text">chat with an expert</span>
-              </StyledLink>
-              <StyledLink to="test">
-                <img src={callImage} alt="help"/>
-                <span className="orange-background" />
-                <span className="text">call us</span>
-              </StyledLink>
-            </div>
-          :
+        {btnClicked &&
           <React.Fragment>
             <span className="results">Showing results for "{searchString}"</span>
             <Map />
