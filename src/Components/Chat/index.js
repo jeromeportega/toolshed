@@ -36,6 +36,8 @@ class Chat extends Component {
       .then(currentUser => {
         this.currentUser = currentUser;
 
+        this.setState({ currentUser: currentUser });
+
         currentUser.subscribeToRoom({
           roomId: roomId,
           hooks: {
@@ -95,7 +97,7 @@ class Chat extends Component {
           <MessageList messages={messages} otherUserIsTyping={otherUserIsTyping} />
           <SendMessageForm
             sendMessage={this.sendMessage}
-            currentUser={this.currentUser}
+            currentUser={this.state.currentUser}
             roomId={roomId}
           />
         </div>
