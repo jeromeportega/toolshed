@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Container, StyledBtn, StyledLink } from './styles';
 import searchImage from './images/search.png';
 
+import Map from '../Map';
+
 import helpImage from './images/help.png';
 import chatImage from './images/chat.jpg';
 import callImage from './images/call.jpg';
@@ -64,7 +66,10 @@ class FindTools extends Component {
               </StyledLink>
             </div>
           :
-          <span className="results">Showing results for "{searchString}"</span>
+          <React.Fragment>
+            <span className="results">Showing results for "{searchString}"</span>
+            <Map />
+          </React.Fragment>
         }
       </Container>
     )
