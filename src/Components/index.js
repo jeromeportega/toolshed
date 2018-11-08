@@ -6,7 +6,8 @@ import HelpLanding from './HelpLanding';
 import NeedHelp from './NeedHelp';
 import FindTools from './FindTools';
 import Chat from './Chat';
-import Map from './Map';
+import DonateLanding from './DonateLanding';
+import DonateTools from './DonateTools';
 
 class App extends Component {
   render() {
@@ -18,6 +19,8 @@ class App extends Component {
         <Route exact path="/need-help" component={NeedHelp} />
         <Route exact path="/find-tools" component={FindTools} />
         <Route exact path="/chat" component={Chat} />
+        <Route exact path="/donate" component={DonateLanding} />
+        <Route exact path="/donate-tools" component={DonateTools} />
       </div>
     );
   }
