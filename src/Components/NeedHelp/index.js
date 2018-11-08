@@ -123,7 +123,10 @@ class NeedHelp extends Component {
                                 onChange={(e) => this.handleChange(e)}
                             />
                         </div>
-                        <StyledBtn to="/chat">let's talk</StyledBtn>
+                        <StyledBtn to={{
+                            pathname: "/chat",
+                            state: { username: name }
+                        }}>let's talk</StyledBtn>
                     </div>
                 </div>
             </NeedHelpContainer>
