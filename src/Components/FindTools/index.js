@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import { Container, StyledBtn } from './styles';
+import { Container, StyledBtn, StyledLink } from './styles';
 import searchImage from './images/search.png';
+
+import helpImage from './images/help.png';
+import chatImage from './images/chat.jpg';
+import callImage from './images/call.jpg';
 
 class FindTools extends Component {
   constructor(props) {
@@ -28,7 +32,6 @@ class FindTools extends Component {
     const { searchString, btnClicked } = this.state;
     return(
       <Container searchString={searchString}>
-        {console.log(searchString)}
         <span className="title">
           A low-cost alternative to renting tools.
         </span>
@@ -40,13 +43,29 @@ class FindTools extends Component {
           <img className="search-image" src={searchImage} alt="search"/>
           <input className="search" name="searchString" value={searchString} placeholder="What are you looking for?" onChange={this.updateSearchString} />
           <StyledBtn onClick={this.updateBtnClicked}>find tools</StyledBtn>
-          {!btnClicked
-            ?
-              <span>Button ! Clicked</span>
-            :
-            <span>Button Clicked!!!!</span>
-          }
         </div>
+        {!btnClicked
+          ?
+            <div className="options-container">
+              <StyledLink to="test">
+                <img src={helpImage} alt="help"/>
+                <span className="orange-background" />
+                <span className="text">want to help?</span>
+              </StyledLink>
+              <StyledLink to="test">
+                <img src={chatImage} alt="help"/>
+                <span className="orange-background" />
+                <span className="text">chat with an expert</span>
+              </StyledLink>
+              <StyledLink to="test">
+                <img src={callImage} alt="help"/>
+                <span className="orange-background" />
+                <span className="text">call us</span>
+              </StyledLink>
+            </div>
+          :
+          <span className="results">Showing results for "{searchString}"</span>
+        }
       </Container>
     )
   };
