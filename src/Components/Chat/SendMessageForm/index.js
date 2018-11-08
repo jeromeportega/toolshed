@@ -10,6 +10,10 @@ class SendMessageForm extends Component {
   }
 
   handleChange = (e) => {
+    const { currentUser, roomId } = this.props;
+
+    currentUser.isTypingIn({ roomId: roomId });
+
     this.setState({ message: e.target.value });
   }
 

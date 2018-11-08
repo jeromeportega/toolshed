@@ -21,7 +21,6 @@ const suggestions = [
         name: 'Flooring',
     },
     {
-
         name: 'Roofing',
     },
     {
