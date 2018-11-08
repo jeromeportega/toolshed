@@ -16,6 +16,7 @@ class Chat extends Component {
       messages: [],
       currentUser: {},
       userId: this.props.history.location.state.username,
+      otherUserIsTyping: false,
     }
   }
 
@@ -37,7 +38,17 @@ class Chat extends Component {
               this.setState({
                 messages: [...this.state.messages, message]
               });
-            }
+            },
+            onUserStartedTyping: props => {
+              this.setState({
+                otherUserIsTyping: true,
+              });
+            },
+            onUserStoppedTyping: props => {
+              this.setState({
+                otherUserIsTyping: false,
+              });
+            },
           },
           messageLimit: 10
         })
@@ -55,14 +66,20 @@ class Chat extends Component {
   }
 
   render() {
-    const { messages } = this.state;
+    const { messages, otherUserIsTyping } = this.state;
 
     return (
       <div>
         <MessageList messages={messages} />
         <SendMessageForm
           sendMessage={this.sendMessage}
+          currentUser={this.currentUser}
+          roomId={roomId}
         />
+        {
+          otherUserIsTyping &&
+            <p>Typing</p>
+        }
       </div>
     );
   }
