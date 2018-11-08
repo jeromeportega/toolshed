@@ -13,6 +13,13 @@ export const Container = styled.div`
     margin-bottom: 50px;
   }
 
+  .description {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+
   .options-container {
     display: flex;
     justify-content: space-between;
@@ -30,7 +37,8 @@ export const Container = styled.div`
   .option-image {
     width: 380px;
     height: 380px;
-    margin-bottom: 40px;
+    margin: 0 auto;
+    margin-bottom: 20px;
   }
 
 `;

@@ -35,7 +35,7 @@ const suggestions = [
     {
         name: 'Appliances and Electronics',
     },
-    {
+    {   
         name: 'Mounting & Installation',
     },
 ];
@@ -95,13 +95,13 @@ class NeedHelp extends Component {
                         <div className="text-button-container">
                             <span className="column-title">Need Help? <br /> Ask a pro.</span>
                             <span className="column-body">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            We’ve gathered the help of over 3500 professionals who’ve volunteered to provide free consultation services to those in need. To chat with someone live, just fill out your information and you’ll be connected to someone instantly.
                             </span>
                         </div>
                     </div>
                     <div className="form-column">
                         <span className="header-text">
-                        Stuck? Have a question?
+                        Stuck?
                         <br />
                         We're here to help.
                         </span>

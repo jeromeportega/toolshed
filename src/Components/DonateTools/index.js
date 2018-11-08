@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Container } from './styles';
-import Input from '../Input';
 
 import Autosuggest from 'react-autosuggest';
 
