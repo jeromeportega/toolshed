@@ -8,7 +8,7 @@ const MessageList = ({
   <Container>
     {
       messages.map(message => (
-        <div class="message" key={message.id}>
+        <div className="message" key={message.id}>
           <span className={message.senderId === 'Jason' ? 'sender jason' : 'sender'}>
             {message.senderId}:
           </span>
