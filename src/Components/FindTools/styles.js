@@ -33,7 +33,7 @@ export const Container = styled.div`
     max-width: 580px;
     max-height: 55px;
     position: relative;
-    margin-bottom: 85px;
+    margin-bottom: 40px;
   }
 
   .search {
@@ -70,6 +70,7 @@ export const Container = styled.div`
     font-weight: bold;
     display: block;
     text-align: center;
+    margin-top: 40px;
     margin-bottom: 40px;
   }
 `;
@@ -87,7 +88,6 @@ export const StyledBtn = styled.button`
   background-color: ${props => props.theme.colors.activeOrange};
   letter-spacing: 2px;
   text-transform: uppercase;
-  z-index: 1;
   border: none;
   text-decoration: none;
   &:hover {
