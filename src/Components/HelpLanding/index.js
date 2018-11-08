@@ -15,7 +15,7 @@ const HelpLanding = () => (
       </div>
       <div className="option-container">
         <div className="option-image" />
-        <StyledBtn to="/to-do">borrow tools</StyledBtn>
+        <StyledBtn to="/find-tools">borrow tools</StyledBtn>
       </div>
     </div>
   </Container>
