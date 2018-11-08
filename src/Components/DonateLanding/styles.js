@@ -28,7 +28,6 @@ export const Container = styled.div`
   }
 
   .option-image {
-    background-color: gray;
     width: 380px;
     height: 380px;
     margin-bottom: 40px;
