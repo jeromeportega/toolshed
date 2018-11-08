@@ -60,25 +60,22 @@ class NeedHelp extends Component {
     handleChange(e) {
         if (e.currentTarget.name === 'name') this.setState({ name: e.currentTarget.value });
         else if (e.currentTarget.name === 'email') this.setState({ email: e.currentTarget.value });
-        else if (e.currentTarget.name === 'category') this.setState({ category: e.currentTarget.value });
+        else if (e.currentTarget.name === 'help') this.setState({ help: e.currentTarget.value });
         else console.log("There was an error in the NeedHelp component.");
     }
 
     onSuggestionChange = (event, { newValue }) => {
+        console.log(event);
         this.setState({ value: newValue });
     }
 
     onSuggestionsFetchRequested = ({ value }) => {
-        this.setState({
-        suggestions: getSuggestions(value)
-        });
-    };
+        this.setState({ suggestions: getSuggestions(value) });
+    }
 
     onSuggestionsClearRequested = () => {
-        this.setState({
-        suggestions: []
-        });
-    };
+        this.setState({ suggestions: [] });
+    }
 
     render() {
         const { name, email, help, value } = this.state;
@@ -87,7 +84,7 @@ class NeedHelp extends Component {
             placeholder: 'What do you need help with?',
             value,
             onChange: this.onSuggestionChange,
-          };
+        };
 
         return (
             <NeedHelpContainer autoValue={value}>
@@ -126,7 +123,10 @@ class NeedHelp extends Component {
                                 onChange={(e) => this.handleChange(e)}
                             />
                         </div>
-                        <StyledBtn to="/talk">let's talk</StyledBtn>
+                        <StyledBtn to={{
+                            pathname: "/chat",
+                            state: { username: name }
+                        }}>let's talk</StyledBtn>
                     </div>
                 </div>
             </NeedHelpContainer>
