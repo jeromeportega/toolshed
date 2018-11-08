@@ -1,22 +1,28 @@
 import React from 'react';
+import { Container } from './styles';
 
 const MessageList = ({
   messages,
+  otherUserIsTyping
 }) => (
-  <ul className="message-list">                 
+  <Container>
     {
       messages.map(message => (
-        <li key={message.id}>
-          <div>
-            {message.senderId}
-          </div>
-          <div>
+        <div class="message" key={message.id}>
+          <span className="sender">
+            {message.senderId}:
+          </span>
+          <span className="sender-message">
             {message.text}
-          </div>
-        </li>
+          </span>
+        </div>
       ))
     }
-  </ul>
+    {
+      otherUserIsTyping &&
+        <img className="typing" src='https://thumbs.gfycat.com/FewDearestFairybluebird-size_restricted.gif' alt="typing" />
+    }
+  </Container>
 );
 
 export default MessageList;

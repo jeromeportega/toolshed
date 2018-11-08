@@ -108,7 +108,6 @@ export const StyledLink = styled(Link)`
   width: 280px;
   height: 280px;
   margin-top: 100px;
-  background-color: red;
   text-decoration: none;
   margin 100px 60px 0 60px;
   position: relative;
