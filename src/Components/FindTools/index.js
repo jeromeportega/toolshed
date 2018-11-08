@@ -38,8 +38,7 @@ class FindTools extends Component {
           A low-cost alternative to renting tools.
         </span>
         <span className="sub-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Don’t have the money to rent new tools? Our donation network allows us to rent used, donated tools for next to nothing. Search for a tool you need below to see a list of locations to rent from.
         </span>
         <div className="search-container">
           <img className="search-image" src={searchImage} alt="search"/>
